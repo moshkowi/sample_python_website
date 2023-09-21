@@ -28,6 +28,13 @@
         margin: 0 auto 0 auto;
       }
     </style>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
   </head>
   <body>
     <div id="container">
@@ -40,8 +47,16 @@
 Nunc consequat interdum varius sit amet mattis. Auctor augue mauris augue neque gravida in. Leo vel orci porta non pulvinar neque. Erat velit scelerisque in dictum non. Vulputate odio ut enim blandit volutpat. Rutrum quisque non tellus orci ac auctor augue mauris augue. Nam at lectus urna duis convallis convallis tellus id interdum. Non quam lacus suspendisse faucibus interdum. Enim facilisis gravida neque convallis a cras semper auctor. Est ultricies integer quis auctor elit sed vulputate mi. Cras semper auctor neque vitae. Tincidunt praesent semper feugiat nibh. A arcu cursus vitae congue.
     </p>
     <h2>Open Positions</h2>
-    <p> TODO - Show the positions here</p>
-    <button>Contact Us</button>
+    <p>  
+    <div> 
+      {% for job in jobs %}
+       {%include "jobitem.html"%}
+      {% endfor %}
+    </div>
+    </p>
+      <div>
+        <p><button>Contact Us</button></p>
+      </div>
   </body>
   </div>
 </html>
